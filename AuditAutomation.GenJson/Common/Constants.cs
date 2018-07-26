@@ -10,7 +10,11 @@ namespace AuditAutomation.GenJson.Common
     {
         public const string LOCAL_FILE_OUTPUT = "OutputPath";
         public const string MIN_RAND = "MinRand";
-        public const string MAX_RAND = "MaxRand";    
-
+        public const string MAX_RAND = "MaxRand";
+        public const int MAX_DAY_EXPIRE = 99;
+        public const int SERIAL_LENGTH = 36;
+        public const int NO_REGION = 2;
+        public const int NO_RESOURCE = 3;
+        public const int NO_CERTIFICATE = 2;
     }
 }

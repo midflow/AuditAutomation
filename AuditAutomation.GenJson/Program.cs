@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Bogus;
 using Moq;
 using AuditAutomation.Models;
 
@@ -12,13 +11,7 @@ namespace AuditAutomation.GenJson
 {
     class Program
     {
-        static string[] AuditIdList = new[]
-                {
-                    "234-56780-AXDC-DVCX",
-                    "323-66354-HDHS-VNSD",
-                    "322-42434-AXDC-DVCX",
-                    "352-43322-BFXS-RRSS"
-                };
+        #region "List Data"
         static string[] SubjectList = new[]
         {
                 "CN=XXXXXX.dv2.bbswrs.aze2.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
@@ -52,19 +45,22 @@ namespace AuditAutomation.GenJson
                     "GE3XXXXXXXAPP02",
                     "gze-XXXXXX-DV2-cls-XXXXXX-002"
                 };
+        #endregion
+        //using for random function
+        static Random random = new Random();
         //Get Location of generated file       
         static int minRand = int.Parse(System.Configuration.ConfigurationManager.AppSettings[Common.Constants.MIN_RAND]);
         static int maxRand = int.Parse(System.Configuration.ConfigurationManager.AppSettings[Common.Constants.MAX_RAND]);
-
+        /// <summary>
+        /// Main console
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             try
             {
                 //Create Mock Audit with Moq
-                IList<Audit> listAudit = GenAuditsByMoq();
-
-                //Create fake data with Bogus
-                //IList<Audit> listAudit = GenAuditsByBogus();
+                IList<Audit> listAudit = GenAuditsByMoq();                
 
                 //Gen Json file with Audit List
                 var rs = Common.Functions.WriteToJson(listAudit);
@@ -75,6 +71,7 @@ namespace AuditAutomation.GenJson
                     Console.ReadLine();
                     return;
                 }
+
                 Console.WriteLine("Generate Json file successfully. Press any key to exit!");
                 Console.ReadLine();
             }
@@ -84,95 +81,31 @@ namespace AuditAutomation.GenJson
                 Console.ReadLine();
             }
         }
-
-        static protected IList<Certificates> GenCertificateList(int length)
-        {
-            var certificateList = new List<Certificates>();
-
-            for (int i = 0; i < length; i++)
-            {
-                var cer = new Certificates()
-                {
-                    Subject = SubjectList[getRandom(SubjectList.Length - 1)],
-                    Issuer = IssuerList[getRandom(IssuerList.Length - 1)],
-                    NoOfDaysToExpire = getRandom(99),
-                    NotAfter = DateTime.Now.ToString(),
-                    SerialNumber = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-                    Thumbprint = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-                };
-
-                certificateList.Add(cer);
-            }
-            return certificateList;
-        }
-
-        static protected IList<Resources> GenResourceList(int length)
-        {
-            var resourceList = new List<Resources>();
-
-            for (int i = 0; i < length; i++)
-            {
-                var res = new Resources()
-                {
-                    ResourceType = ResourceTypeList[getRandom(ResourceTypeList.Length - 1)],
-                    Data = new List<Data>()
-                    {
-                        new Data()
-                        {
-                            Name = DataNameList[getRandom(DataNameList.Length-1)],
-                            Certificates = GenCertificateList(2)
-                        }
-                    }
-                };
-
-                resourceList.Add(res);
-            }
-
-            return resourceList;
-        }
-
-        static protected IList<Region> GenRegionList(int length)
-        {
-            var regionList = new List<Region>();
-
-            for (int i = 0; i < length; i++)
-            {
-                var reg = new Region()
-                {
-                    Name = RegionNameList[getRandom(RegionNameList.Length - 1)],
-                    Resources = GenResourceList(3)
-                };
-
-                regionList.Add(reg);
-            }
-            return regionList;
-        }
-
-        static protected int getRandom(int max)
-        {
-            var rnd = new Random();
-            return rnd.Next(max);
-        }
-
-        static protected IList<Audit> GenAuditsByMoq()
+        /// <summary>
+        /// Generate Audit list
+        /// </summary>
+        /// <returns></returns>
+        static IList<Audit> GenAuditsByMoq()
         {            
-            var rnd = new Random();
-
-            //number of Audits to gen
-            int noAudit = rnd.Next(minRand, maxRand);
+            //number of Audits to generate
+            int noAudit = random.Next(minRand, maxRand);
             var listAudits = new List<Audit>();
 
             for (int iAudit = 0; iAudit < noAudit; iAudit++)
             {
                 //Create Audits 
                 var audit = new Audit();
-
-                audit.AuditId = iAudit.ToString() + AuditIdList[rnd.Next(3)];
-                audit.AuditCriteria = new AuditCriterias() { NoOfDaysToExpire = rnd.Next(10, 99) };
-                audit.SubscriptionId = "xxxxxxxxxxxxxxx";
-                audit.AuditTimeStamp = "07_05_2018_08_02_59";
-                audit.AuditSubcategoryType = "CCCP200" + iAudit;
-                audit.Region = GenRegionList(2);
+                //AuditID format: "1234-56780-AXDC-DVCX"
+                audit.AuditId = RandomNumberString(4) + "-" + RandomNumberString(5) + "-"
+                                + RandomUpperCaseString(4) + "-" + RandomUpperCaseString(4);
+                audit.AuditCriteria = new AuditCriterias() { NoOfDaysToExpire = random.Next(Common.Constants.MAX_DAY_EXPIRE) };
+                audit.SubscriptionId = RandomUpperCaseString(12);
+                audit.AuditTimeStamp = DateTime.Now.AddDays(-random.Next(30)).ToString("MM_dd_yyyy_hh_mm_ss");// "07_05_2018_08_02_59";
+                audit.AuditSubcategoryType = "CCCP" + RandomNumberString(4);
+                audit.Region = GenRegionList(Common.Constants.NO_REGION);
+                //Sample SubscriptionName: "GZ-NP-IT-03"
+                audit.SubscriptionName = RandomUpperCaseString(2) + "-" + RandomUpperCaseString(2) + "-"
+                                + RandomUpperCaseString(2) + "-" + RandomNumberString(2);
 
                 listAudits.Add(audit);
             }
@@ -185,53 +118,120 @@ namespace AuditAutomation.GenJson
 
             return mockAuditRepository.Object.SelectAll();
         }
-
-        static protected IList<Audit> GenAuditsByBogus()
+        /// <summary>
+        /// Generate Samples Certificates
+        /// </summary>
+        /// <param name="length">size of List</param>
+        /// <returns></returns>
+        static IList<Certificates> GenCertificateList(int length)
         {
-            //1. Certificates           
-            var certificate = new Faker<Certificates>()
-                    .RuleFor(c => c.Subject, f => f.PickRandom(SubjectList))
-                    .RuleFor(c => c.Issuer, f => f.PickRandom(IssuerList))
-                    .RuleFor(c => c.NoOfDaysToExpire, f => f.Random.Number(10, 99))
-                    .RuleFor(c => c.NotAfter, f => f.Date.Future().ToString("MM/dd/yyy hh:mm:ss tt"))
-                    .RuleFor(c => c.SerialNumber, f => f.Random.Replace("????????????????????????????????????"))
-                    .RuleFor(c => c.Thumbprint, f => f.Random.Replace("????????????????????????????????????"));
+            var certificateList = new List<Certificates>();
 
-            //2. Datas 
-            var datas = new Faker<Data>()
-                   .RuleFor(d => d.Name, f => f.Random.Replace("???-??????-??#-???-??????-###"))
-                   .RuleFor(d => d.Certificates, f => certificate.Generate(2).ToList());
+            for (int i = 0; i < length; i++)
+            {
+                var cer = new Certificates()
+                {
+                    Subject = SubjectList[random.Next(SubjectList.Length - 1)],
+                    Issuer = IssuerList[random.Next(IssuerList.Length - 1)],
+                    NoOfDaysToExpire = random.Next(Common.Constants.MAX_DAY_EXPIRE),
+                    NotAfter = DateTime.Now.AddDays(random.Next(Common.Constants.MAX_DAY_EXPIRE)).ToString(),
+                    SerialNumber = RandomUpperCaseString(Common.Constants.SERIAL_LENGTH),
+                    Thumbprint = RandomUpperCaseString(Common.Constants.SERIAL_LENGTH)
+                };
 
-            //3. Resources
-            var resource = new Faker<Resources>()
-                .RuleFor(r => r.ResourceType, f => f.PickRandom(ResourceTypeList))
-                .RuleFor(r => r.Data, f => datas.Generate(1).ToList());
-
-            //4. Regions
-            var regions = new Faker<Region>()
-                .RuleFor(ri => ri.Name, f => f.PickRandom(RegionNameList))
-                .RuleFor(ri => ri.Resources, f => resource.Generate(3).ToList());
-
-            //5. AuditCreteria
-            var auditCriteria = new Faker<AuditCriterias>()
-                .RuleFor(ac => ac.NoOfDaysToExpire, f => f.Random.Number(10, 99));
-
-            //6.Audit
-            var audits = new Faker<Audit>()
-                .RuleFor(a => a.AuditId, f => f.Random.Replace("####-#####-????-????"))
-                .RuleFor(a => a.SubscriptionName, f => f.Random.Replace("??-??-??-##"))
-                .RuleFor(a => a.SubscriptionId, f => f.Random.Replace("???????????????"))
-                .RuleFor(a => a.AuditTimeStamp, f => f.Date.Past().ToString("MM_dd_yyyy_hh_mm_ss"))
-                .RuleFor(a => a.AuditSubcategoryType, f => f.Random.Replace("CCCP####"))
-                .RuleFor(a => a.AuditCriteria, f => auditCriteria.Generate(1).SingleOrDefault())
-                .RuleFor(a => a.Region, f => regions.Generate(2).ToList());
-
-            var rnd = new Random();
-
-            List<Audit> fakeAudits = audits.Generate(rnd.Next(minRand, maxRand));
-
-            return fakeAudits;
+                certificateList.Add(cer);
+            }
+            return certificateList;
         }
+        /// <summary>
+        /// Generate sample Resources
+        /// </summary>
+        /// <param name="length">size of List</param>
+        /// <returns></returns>
+        static IList<Resources> GenResourceList(int length)
+        {
+            var resourceList = new List<Resources>();
 
+            for (int i = 0; i < length; i++)
+            {
+                var res = new Resources()
+                {
+                    ResourceType = ResourceTypeList[random.Next(ResourceTypeList.Length - 1)],
+                    Data = new List<Data>()
+                    {
+                        new Data()
+                        {
+                            Name = DataNameList[random.Next(DataNameList.Length-1)],
+                            Certificates = GenCertificateList(Common.Constants.NO_CERTIFICATE)
+                        }
+                    }
+                };
+
+                resourceList.Add(res);
+            }
+
+            return resourceList;
+        }
+        /// <summary>
+        /// Generate sample regions
+        /// </summary>
+        /// <param name="length">size of List</param>
+        /// <returns></returns>
+        static IList<Region> GenRegionList(int length)
+        {
+            var regionList = new List<Region>();
+
+            for (int i = 0; i < length; i++)
+            {
+                var reg = new Region()
+                {
+                    Name = RegionNameList[random.Next(RegionNameList.Length - 1)],
+                    Resources = GenResourceList(Common.Constants.NO_RESOURCE)
+                };
+
+                regionList.Add(reg);
+            }
+            return regionList;
+        }        
+        /// <summary>
+        /// Generate random string with numbers or letters like "YYEere232"
+        /// </summary>
+        /// <param name="length">length of string</param>
+        /// <returns></returns>
+        static string RandomString(int length)
+        {            
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        /// <summary>
+        /// Generate random string with number like "1232343"
+        /// </summary>
+        /// <param name="length">length of string</param>
+        /// <returns></returns>
+        static string RandomNumberString(int length)
+        {           
+            const string chars = "0123456789";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        /// <summary>
+        /// Generate random string with UPPERCASE
+        /// </summary>
+        /// <param name="length">length of string</param>
+        /// <returns></returns>
+        static string RandomUpperCaseString(int length)
+        {            
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        /// <summary>
+        /// Generate random string with lowercase
+        /// </summary>
+        /// <param name="length">length of string</param>
+        /// <returns></returns>
+        static string RandomLowerCaseString(int length)
+        {            
+            const string chars = "abcdefghijklmnopqrstuvwxyz";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }
