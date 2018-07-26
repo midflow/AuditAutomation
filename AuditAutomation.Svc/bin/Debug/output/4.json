@@ -1,0 +1,178 @@
+{
+  "AuditId": "1234-56780-AXDC-DVCX",
+  "SubscriptionName": "GZ-NP-IT-03",
+  "SubscriptionId": "xxxxxxxxxxxxxxx",
+  "AuditTimeStamp": "07_05_2018_08_02_59",
+  "AuditSubcategoryType": "CCCP2005",
+  "AuditCriteria": {
+    "NoOfDaysToExpire": 90
+  },
+  "Region": [
+    {
+      "Name": "East US",
+      "Resources": [
+        {
+          "ResourceType": "Cloud service (classic)",
+          "Data": [
+            {
+              "Name": "gze-XXXXXX-DV1-cls-XXXXXX-001",
+              "Certificates": [
+                {
+                  "Subject": "CN=XXXXXX.dv1.bbswrs.aze1.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
+                  "NotAfter": "/Date(1558020852000)/",
+                  "Issuer": "CN=GEICO SHA256 SUB CA 01, DC=GEICO, DC=corp, DC=net",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 89
+                },
+                {
+                  "Subject": "CN=XXXXXX.dv1.bbswrs.aze1.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
+                  "NotAfter": "/Date(1558020852000)/",
+                  "Issuer": "CN=GEICO SHA256 SUB CA 01, DC=GEICO, DC=corp, DC=net",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 45
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ResourceType": "Virtual Machines (classic)",
+          "Data": [
+            {
+              "Name": "GE2XXXXXXXAPP01",
+              "Certificates": [
+                {
+                  "Subject": "CN=GEICODDC Private Primary Issuing CA, O=GEICO",
+                  "NotAfter": "10/09/2018 1:19:44 PM",
+                  "Issuer": "CN=GEICODDC Private Primary Issuing CA, O=GEICO",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 90
+                },
+                {
+                  "Subject": "DC=Windows Azure CRP Certificate Generator",
+                  "NotAfter": "09/14/2018 9:57:59 AM",
+                  "Issuer": "DC=Windows Azure CRP Certificate Generator",
+                  "SerialNumber": null,
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 65
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ResourceType": "Virtual Machines",
+          "Data": [
+            {
+              "Name": "GZEXXXXXXXXXX02",
+              "Certificates": [
+                {
+                  "Subject": "CN=XXXXXX.pd8.bbswrs.aze1.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
+                  "NotAfter": "/Date(1558020852000)/",
+                  "Issuer": "CN=GEICO SHA256 SUB CA 01, DC=GEICO, DC=corp, DC=net",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 89
+                },
+                {
+                  "Subject": "CN=XXXXXX.pd8.bbswrs.aze1.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
+                  "NotAfter": "/Date(1558020852000)/",
+                  "Issuer": "CN=GEICO SHA256 SUB CA 01, DC=GEICO, DC=corp, DC=net",
+                  "SerialNumber": null,
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 45
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "West US",
+      "Resources": [
+        {
+          "ResourceType": "Cloud service (classic)",
+          "Data": [
+            {
+              "Name": "gzw-XXXXXX-PD8-cls-XXXXXX-001",
+              "Certificates": [
+                {
+                  "Subject": "CN=GEICODDC Private Primary Issuing CA, O=GEICO",
+                  "NotAfter": "10/09/2018 1:19:44 PM",
+                  "Issuer": "CN=GEICODDC Private Primary Issuing CA, O=GEICO",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 90
+                },
+                {
+                  "Subject": "DC=Windows Azure CRP Certificate Generator",
+                  "NotAfter": "09/14/2018 9:57:59 AM",
+                  "Issuer": "DC=Windows Azure CRP Certificate Generator",
+                  "SerialNumber": null,
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 65
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ResourceType": "Virtual Machines (classic)",
+          "Data": [
+            {
+              "Name": "GZW2XXXXXXXAPP01",
+              "Certificates": [
+                {
+                  "Subject": "CN=GEICODDC Private Primary Issuing CA, O=GEICO",
+                  "NotAfter": "10/09/2018 1:19:44 PM",
+                  "Issuer": "CN=GEICODDC Private Primary Issuing CA, O=GEICO",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 90
+                },
+                {
+                  "Subject": "DC=Windows Azure CRP Certificate Generator",
+                  "NotAfter": "09/14/2018 9:57:59 AM",
+                  "Issuer": "DC=Windows Azure CRP Certificate Generator",
+                  "SerialNumber": null,
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 65
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ResourceType": "Virtual Machines",
+          "Data": [
+            {
+              "Name": "GZWXXXXXXXXXX02",
+              "Certificates": [
+                {
+                  "Subject": "CN=XXXXXX.pd8.bbswrs.aze1.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
+                  "NotAfter": "/Date(1558020852000)/",
+                  "Issuer": "CN=GEICO SHA256 SUB CA 01, DC=GEICO, DC=corp, DC=net",
+                  "SerialNumber": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 89
+                },
+                {
+                  "Subject": "CN=XXXXXX.pd8.bbswrs.aze1.cloud.geico.net, OU=API Access, O=GEICO, L=Chevy Chase, S=Maryland, C=US",
+                  "NotAfter": "/Date(1558020852000)/",
+                  "Issuer": "CN=GEICO SHA256 SUB CA 01, DC=GEICO, DC=corp, DC=net",
+                  "SerialNumber": null,
+                  "Thumbprint": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "NoOfDaysToExpire": 45
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

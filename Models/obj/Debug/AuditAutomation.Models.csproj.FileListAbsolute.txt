@@ -1,0 +1,5 @@
+E:\Projects\AzureAutomation\AuditAutomation\Models\bin\Debug\Models.dll
+E:\Projects\AzureAutomation\AuditAutomation\Models\bin\Debug\Models.pdb
+E:\Projects\AzureAutomation\AuditAutomation\Models\obj\Debug\AuditAutomation.Models.csproj.CoreCompileInputs.cache
+E:\Projects\AzureAutomation\AuditAutomation\Models\obj\Debug\Models.dll
+E:\Projects\AzureAutomation\AuditAutomation\Models\obj\Debug\Models.pdb

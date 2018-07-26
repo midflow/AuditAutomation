@@ -1,0 +1,12 @@
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CoreCompileInputs.cache
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll.config
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.pdb
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.dll
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.pdb
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll.config
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.pdb
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CoreCompileInputs.cache
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.dll
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.pdb
