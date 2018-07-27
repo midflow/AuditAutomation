@@ -14,24 +14,9 @@ namespace AuditAutomation.Svc.Services.Implementations
     public class AuditSvc : IAuditSvc
     {
         private IAuditRepository _auditRepository;
-        private IAuditCriteriaRepository _auditCriteriaRepository;
-        private ICertificateRepository _certificateRepository;
-        private IDataRepository _dataRepository;
-        private IRegionRepository _regionRepository;
-        private IResourceReposiroty _resourceReposiroty;
 
         [Dependency]
         public IAuditRepository AuditRepository { get => _auditRepository; set => _auditRepository = value; }
-        [Dependency]
-        public IAuditCriteriaRepository AuditCriteriaRepository { get => _auditCriteriaRepository; set => _auditCriteriaRepository = value; }
-        [Dependency]
-        public ICertificateRepository Certificate { get => _certificateRepository; set => _certificateRepository = value; }
-        [Dependency]
-        public IDataRepository Data { get => _dataRepository; set => _dataRepository = value; }
-        [Dependency]
-        public IRegionRepository Region { get => _regionRepository; set => _regionRepository = value; }
-        [Dependency]
-        public IResourceReposiroty Resource { get => _resourceReposiroty; set => _resourceReposiroty = value; }
 
         public Audit ReadFile(string path)
         {
@@ -69,8 +54,8 @@ namespace AuditAutomation.Svc.Services.Implementations
             bool isOK = false;
             if (data != null)
             {
-                //var auditFromDB = _auditRepository.Get(o => o.AuditId == data.AuditId);
-                if (true)
+                var auditFromDB = _auditRepository.Get(o => o.AuditId == data.AuditId);
+                if (auditFromDB==null)
                 {
                     DAL.Audit dbAudit = new DAL.Audit
                     {
