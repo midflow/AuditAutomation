@@ -36,6 +36,7 @@ namespace AuditAutomation.Svc.Processors
                     var fileName = Path.GetFileName(filePath);
                     var audit = _auditService.ReadFile(filePath);
                     _auditService.WriteFile(audit, localDirectoryOutput + @"\" + fileName);
+                    _auditService.WriteDataToDB(audit);
                 }
             }
         }

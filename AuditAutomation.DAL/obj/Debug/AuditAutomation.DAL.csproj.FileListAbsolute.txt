@@ -4,9 +4,45 @@ D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomat
 D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.pdb
 D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.dll
 D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.pdb
-E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll.config
-E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll
-E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.pdb
-E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CoreCompileInputs.cache
-E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.dll
-E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.pdb
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\App_Data\AuditReportDB.mdf
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\App_Data\AuditReportDB_log.ldf
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditReportDB.mdf
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditReportDB_log.ldf
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.dll
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.xml
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csprojResolveAssemblyReference.cache
+D:\projects\GEICO\src\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CopyComplete
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\App_Data\AuditReportDB.mdf
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\App_Data\AuditReportDB_log.ldf
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditReportDB.mdf
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditReportDB_log.ldf
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll.config
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.pdb
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.dll
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.xml
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csprojAssemblyReference.cache
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CoreCompileInputs.cache
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CopyComplete
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.dll
+C:\Users\diennt\Downloads\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\App_Data\AuditReportDB.mdf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\App_Data\AuditReportDB_log.ldf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditReportDB.mdf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditReportDB_log.ldf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll.config
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\AuditAutomation.DAL.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.xml
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csprojAssemblyReference.cache
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CoreCompileInputs.cache
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.csproj.CopyComplete
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.DAL\obj\Debug\AuditAutomation.DAL.pdb
