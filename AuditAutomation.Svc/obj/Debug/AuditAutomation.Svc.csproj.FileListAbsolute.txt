@@ -134,3 +134,14 @@ D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\Aud
 D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.csproj.CopyComplete
 D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.exe
 D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.pdb
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\App_Data\AuditReportDB.mdf
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\App_Data\AuditReportDB_log.ldf
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditReportDB.mdf
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditReportDB_log.ldf
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.DAL.dll
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.dll
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.DAL.pdb
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.DAL.dll.config
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.xml
+E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.SqlServer.xml

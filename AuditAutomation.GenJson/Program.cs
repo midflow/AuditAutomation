@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Moq;
 using AuditAutomation.Models;
+using System.Configuration;
 
 namespace AuditAutomation.GenJson
 {
@@ -48,9 +49,9 @@ namespace AuditAutomation.GenJson
         #endregion
         //using for random function
         static Random random = new Random();
-        //Get Location of generated file       
-        static int minRand = int.Parse(System.Configuration.ConfigurationManager.AppSettings[Common.Constants.MIN_RAND]);
-        static int maxRand = int.Parse(System.Configuration.ConfigurationManager.AppSettings[Common.Constants.MAX_RAND]);
+        //Get min/max for random number of Audit file       
+        static int minRand = int.Parse(ConfigurationManager.AppSettings[Common.Constants.MIN_RAND]);
+        static int maxRand = int.Parse(ConfigurationManager.AppSettings[Common.Constants.MAX_RAND]);
         /// <summary>
         /// Main console
         /// </summary>
