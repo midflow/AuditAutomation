@@ -55,7 +55,7 @@ namespace AuditAutomation.Svc.Services.Implementations
             if (data != null)
             {
                 var auditFromDB = _auditRepository.Get(o => o.AuditId == data.AuditId);
-                if (auditFromDB == null)
+                if (auditFromDB==null)
                 {
                     DAL.Audit dbAudit = new DAL.Audit
                     {
@@ -65,19 +65,56 @@ namespace AuditAutomation.Svc.Services.Implementations
                         SubscriptionId = data.SubscriptionId,
                         SubscriptionName = data.SubscriptionName
                     };
-                    _auditRepository.Add(dbAudit);
-                }
 
-                if (auditFromDB != null)
-                {
-                    DAL.AuditCriteria auditCriteria = new DAL.AuditCriteria
+                    List<DAL.AuditCriteria> aa = new List<DAL.AuditCriteria>();
+                    DAL.AuditCriteria ar = new DAL.AuditCriteria();
+                    ar.NoOfDaysToExpire = data.AuditCriteria.NoOfDaysToExpire;
+                    aa.Add(ar);
+                    dbAudit.AuditCriterias = aa;
+
+                    List<DAL.Region> rgList = new List<DAL.Region>();
+                    foreach (var itemRegion in data.Region)
                     {
-                        NoOfDaysToExpire = data.AuditCriteria.NoOfDaysToExpire,
-                        AuditId = auditFromDB.Id,
-                    };
-                }
+                        DAL.Region rg = new DAL.Region();
+                        rg.Name = itemRegion.Name;
+                        List<DAL.Resource> rsList = new List<DAL.Resource>();
+                        foreach (var resource in itemRegion.Resources)
+                        {
+                            DAL.Resource rs = new DAL.Resource();
+                            rs.ResourceType = resource.ResourceType;
+                            List<DAL.Datum> dtList = new List<DAL.Datum>();
+                            foreach (var datum in resource.Data)
+                            {
+                                DAL.Datum dt = new DAL.Datum();
+                                dt.Name = datum.Name;
+                                List<DAL.Certificate> cList = new List<DAL.Certificate>();
+                                foreach (var certificate in datum.Certificates)
+                                {
+                                    DAL.Certificate c = new DAL.Certificate();
+                                    c.Subject = certificate.Subject;
+                                    c.NoOfDaysToExpire = certificate.NoOfDaysToExpire;
+                                    c.NotAfter = certificate.NotAfter;
+                                    c.Issuer = certificate.Issuer;
+                                    c.SerialNumber = certificate.SerialNumber;
+                                    c.Thumbprint = certificate.Thumbprint;
+                                    cList.Add(c);
+                                }
+                                dt.Certificates = cList;
+                                dtList.Add(dt);
+                            }
+                            rs.Data = dtList;
+                            rsList.Add(rs);
+                        }
 
-                _auditRepository.SaveChanges();
+                        rg.Resources = rsList;
+                        rgList.Add(rg);
+                    }
+
+                    dbAudit.Regions = rgList;
+                    _auditRepository.Add(dbAudit);
+                    _auditRepository.SaveChanges();
+                }
+                
                 isOK = true;
             }
             return isOK;

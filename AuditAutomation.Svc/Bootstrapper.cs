@@ -23,6 +23,11 @@ namespace AuditAutomation.Svc
         {
             _container.RegisterType<IAuditSvc, AuditSvc>(); //register service for auto DI
             _container.RegisterType<IAuditRepository, AuditRepository>(); //register repository for auto DI
+            _container.RegisterType<IAuditCriteriaRepository, AuditCriteriaRepository>();
+            _container.RegisterType<ICertificateRepository, CertificateRepository>();
+            _container.RegisterType<IDataRepository, DataRepository>();
+            _container.RegisterType<IRegionRepository, RegionRepository>();
+            _container.RegisterType<IResourceReposiroty, ResourceRepository>();
             return _container;
         }
 
