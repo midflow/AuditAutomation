@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AuditAutomation.DAL.Repositories;
+using AuditAutomation.DAL.Repositories.Concrete;
 using AuditAutomation.Svc.Services;
 using AuditAutomation.Svc.Services.Implementations;
 using CommonServiceLocator;
@@ -20,6 +22,7 @@ namespace AuditAutomation.Svc
         public static UnityContainer Initialize()
         {
             _container.RegisterType<IAuditSvc, AuditSvc>(); //register service for auto DI
+            _container.RegisterType<IAuditRepository, AuditRepository>(); //register repository for auto DI
             return _container;
         }
 

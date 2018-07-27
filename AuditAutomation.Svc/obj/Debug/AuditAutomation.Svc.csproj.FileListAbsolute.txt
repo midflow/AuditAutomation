@@ -96,3 +96,41 @@ E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.
 E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Interception.pdb
 E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Interception.Configuration.pdb
 E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.RegistrationByConvention.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\App_Data\AuditReportDB.mdf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\App_Data\AuditReportDB_log.ldf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditReportDB.mdf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditReportDB_log.ldf
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe.config
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.DAL.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\CommonServiceLocator.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.SqlServer.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Models.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Newtonsoft.Json.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Abstractions.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Configuration.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Container.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Interception.Configuration.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Interception.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.RegistrationByConvention.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.ServiceLocation.dll
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.DAL.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.DAL.dll.config
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Models.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.xml
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\EntityFramework.SqlServer.xml
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Newtonsoft.Json.xml
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Configuration.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Container.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Interception.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.Interception.Configuration.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\Unity.RegistrationByConvention.pdb
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.csprojAssemblyReference.cache
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.ProjectInstaller.resources
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.csproj.GenerateResource.cache
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.csproj.CoreCompileInputs.cache
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.csproj.CopyComplete
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.exe
+D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\obj\Debug\AuditAutomation.Svc.pdb

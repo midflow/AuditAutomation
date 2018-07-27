@@ -513,3 +513,24 @@ Affected parameters are:
    logtoconsole = 
    logfile = E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.InstallLog
    assemblypath = E:\Projects\AzureAutomation\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe
+Installing assembly 'D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.InstallLog
+   assemblypath = D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe
+Installing service AuditAutomationSvc...
+Service AuditAutomationSvc has been successfully installed.
+Creating EventLog source AuditAutomationSvc in log Application...
+Committing assembly 'D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.InstallLog
+   assemblypath = D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe
+Uninstalling assembly 'D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.InstallLog
+   assemblypath = D:\Source Project\VisualStudio\AuditAutomation\AuditAutomation.Svc\bin\Debug\AuditAutomation.Svc.exe
+Removing EventLog source AuditAutomationSvc.
+Service AuditAutomationSvc is being removed from the system...
+Service AuditAutomationSvc was successfully removed from the system.

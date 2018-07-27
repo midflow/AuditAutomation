@@ -10,6 +10,7 @@ namespace AuditAutomation.Svc.Services
     public interface IAuditSvc
     {
         Audit ReadFile(string path);
-        bool WriteFile(Audit data, string path);        
+        bool WriteFile(Audit data, string path);
+        bool WriteDataToDB(Audit data);
     }
 }
