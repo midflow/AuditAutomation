@@ -14,7 +14,7 @@ namespace AuditAutomation.DAL
         void Delete(TEntity entity);
         void Add(TEntity entity);
         void Update(TEntity entity);
-        TEntity Get(Expression<Func<TEntity, bool>> where);
+        TEntity FirstOrDefault(Expression<Func<TEntity, bool>> where);
         void SaveChanges();
     }
 }

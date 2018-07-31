@@ -131,18 +131,8 @@
     <Compile Include="Region.cs">
       <DependentUpon>AuditDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\Concrete\AuditRepository.cs" />
-    <Compile Include="Repositories\Concrete\AuditCriteriaRepository.cs" />
-    <Compile Include="Repositories\Concrete\CertificateRepository.cs" />
-    <Compile Include="Repositories\Concrete\DataRepository.cs" />
-    <Compile Include="Repositories\Concrete\RegionRepository.cs" />
-    <Compile Include="Repositories\Concrete\ResourceRepository.cs" />
-    <Compile Include="Repositories\IAuditCriteriaRepository.cs" />
-    <Compile Include="Repositories\IAuditRepository.cs" />
-    <Compile Include="Repositories\ICertificateRepository.cs" />
-    <Compile Include="Repositories\IDataRepository.cs" />
-    <Compile Include="Repositories\IRegionRepository.cs" />
-    <Compile Include="Repositories\IResourceReposiroty.cs" />
+    <Compile Include="Repositories\Concrete\Repository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Resource.cs">
       <DependentUpon>AuditDB.tt</DependentUpon>
     </Compile>

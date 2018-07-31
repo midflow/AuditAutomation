@@ -15,7 +15,7 @@ namespace AuditAutomation.Models
         public string AuditTimeStamp { get; set; }
         public string AuditSubcategoryType { get; set; }
         public virtual AuditCriterias AuditCriteria { get; set; }
-        public virtual IList<Region> Region { get; set; }
+        public virtual ICollection<Region> Region { get; set; }
     }
 
     public class AuditCriterias
@@ -26,19 +26,19 @@ namespace AuditAutomation.Models
     public class Region
     {
         public string Name { get; set; }
-        public IList<Resources> Resources { get; set; }
+        public ICollection<Resources> Resources { get; set; }
     }
 
     public class Resources
     {
         public string ResourceType { get; set; }
-        public IList<Data> Data { get; set; }
+        public ICollection<Data> Data { get; set; }
     }
 
     public class Data
     {
         public string Name { get; set; }
-        public IList<Certificates> Certificates { get; set; }
+        public ICollection<Certificates> Certificates { get; set; }
     }
 
     public class Certificates
