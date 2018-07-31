@@ -21,18 +21,10 @@ namespace AuditAutomation.Svc.Helpers
             {
                 config.CreateMap<Audit, DAL.Audit>()
                     .ForMember(c => c.Regions, option => option.MapFrom(o => o.Region));
-
                 config.CreateMap<AuditCriterias, DAL.AuditCriteria>();
-
-                config.CreateMap<Region, DAL.Region>()
-                    .ForMember(c => c.Resources, option => option.MapFrom(o => o.Resources));
-
-                config.CreateMap<Resources, DAL.Resource>()
-                    .ForMember(c => c.Data, option => option.MapFrom(o => o.Data));
-
-                config.CreateMap<Data, DAL.Datum>()
-                    .ForMember(c => c.Certificates, option => option.MapFrom(o => o.Certificates));
-
+                config.CreateMap<Region, DAL.Region>();
+                config.CreateMap<Resources, DAL.Resource>();
+                config.CreateMap<Data, DAL.Datum>();
                 config.CreateMap<Certificates, DAL.Certificate>();
             });
         }

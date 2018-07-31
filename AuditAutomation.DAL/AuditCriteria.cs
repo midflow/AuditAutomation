@@ -16,7 +16,6 @@ namespace AuditAutomation.DAL
     {
         public int Id { get; set; }
         public int NoOfDaysToExpire { get; set; }
-        public int AuditId { get; set; }
     
         public virtual Audit Audit { get; set; }
     }

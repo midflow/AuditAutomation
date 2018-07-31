@@ -17,7 +17,6 @@ namespace AuditAutomation.DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Audit()
         {
-            this.AuditCriterias = new HashSet<AuditCriteria>();
             this.Regions = new HashSet<Region>();
         }
     
@@ -28,8 +27,7 @@ namespace AuditAutomation.DAL
         public string AuditTimeStamp { get; set; }
         public string AuditSubcategoryType { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AuditCriteria> AuditCriterias { get; set; }
+        public virtual AuditCriteria AuditCriteria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Region> Regions { get; set; }
     }
