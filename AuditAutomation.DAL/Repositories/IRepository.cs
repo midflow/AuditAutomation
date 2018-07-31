@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AuditAutomation.DAL.Repositories
 {
-    public interface IAuditRepository : IBaseRepository<Audit>
+    public interface IRepository
     {
+        IBaseRepository<T> GetRepository<T>() where T : class;
     }
 }

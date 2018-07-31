@@ -62,7 +62,7 @@ namespace AuditAutomation.DAL
             entry.State = System.Data.Entity.EntityState.Modified;
         }
 
-        public TEntity Get(Expression<Func<TEntity, bool>> where)
+        public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> where)
         {
             var query = DBContext.Set<TEntity>();
             var entity = (where != null ? query.Where(where) : query).FirstOrDefault();

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AuditAutomation.DAL.Repositories.Concrete
 {
-    public class ResourceRepository : BaseRepository<Resource>, IResourceReposiroty
+     public class Repository : IRepository
     {
+        public IBaseRepository<T> GetRepository<T>() where T : class
+        {
+            return new BaseRepository<T>();
+        }
     }
 }
