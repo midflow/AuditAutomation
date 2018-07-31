@@ -61,8 +61,8 @@
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Functions.cs" />
     <Compile Include="Helpers\ConfigurationHelper.cs" />
-    <Compile Include="Respositories\AuditRepository.cs" />
-    <Compile Include="Respositories\IAuditRepository.cs" />
+    <Compile Include="Repositories\AuditRepository.cs" />
+    <Compile Include="Repositories\IAuditRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,9 +70,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Genfiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\AuditAutomation\Models\AuditAutomation.Models.csproj">
       <Project>{a4dea924-950e-49c7-b685-a165e935c49f}</Project>
