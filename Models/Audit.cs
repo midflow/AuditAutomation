@@ -20,7 +20,7 @@ namespace AuditAutomation.Models
         public virtual AuditCriterias AuditCriteria { get; set; }
         public virtual ICollection<Region> Region { get; set; }
         //All the individual users should be reviewed and approved by the Subscription DevOps Manager. 
-        public List<User> ADUsers { get; set; }//CCCP-1003 - Co-Admin Audit
+        public ICollection<User> ADUsers { get; set; }//CCCP-1003 - Co-Admin Audit
         public AuditData Data { get; set; }//CCCP-1003 - Co-Admin Audit
     }
     /// <summary>
@@ -28,15 +28,15 @@ namespace AuditAutomation.Models
     /// </summary>
     public class AuditData
     {
-        public List<ADGroup> ADGroups { get; set; }
+        public ICollection<ADGroup> ADGroups { get; set; }
     }
 
     public class AuditCriterias
     {
         public int? NoOfDaysToExpire { get; set; }
         public bool? IsPartOfBuildOU { get; set; } //For CCCP1005 - Build OU Audit
-        public List<string> ResourceLocation { get; set; } //CCCP-2009 App Insight Resource Plan
-        public List<string> ResourcePlan { get; set; }//CCCP-2009 App Insight Resource Plan
+        public ICollection<string> ResourceLocation { get; set; } //CCCP-2009 App Insight Resource Plan
+        public ICollection<string> ResourcePlan { get; set; }//CCCP-2009 App Insight Resource Plan
         public string RoleDefinitionName { get; set; }//CCCP-1003 - Co-Admin Audit
         public bool? ExcludeServiceAdministrators { get; set; }//CCCP-1003 - Co-Admin Audit
         public int? QuotaLimit { get; set; }//CCCP-3002 -Azure Resources Quota Limit Audit
@@ -62,7 +62,7 @@ namespace AuditAutomation.Models
         public string DistinguishedName { get; set; } //For CCCP1005 - Build OU Audit
         public string PricingPlan { get; set; }//CCCP-2009 App Insight Resource Plan
         public ICollection<Certificates> Certificates { get; set; }
-        public List<ADGroup> ADGroups { get; set; }//CCCP-1003 - Co-Admin Audit
+        public ICollection<ADGroup> ADGroups { get; set; }//CCCP-1003 - Co-Admin Audit
         //below for CCCP-3002 -Azure Resources Quota Limit Audit
         public int? CurrentUsage { get; set; }
         public int? MaximumUsage { get; set; }
@@ -85,7 +85,7 @@ namespace AuditAutomation.Models
     {
         public string SignInName { get; set; }
         public string DisplayName { get; set; }
-        public List<string> RoleDefinitionName { get; set; }
+        public ICollection<string> RoleDefinitionName { get; set; }
     }
 
     //CCCP-1003 - Co-Admin Audit
@@ -93,6 +93,6 @@ namespace AuditAutomation.Models
     {
         public string Name { get; set; }
         public string Approver { get; set; }
-        public List<User> Users { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }
