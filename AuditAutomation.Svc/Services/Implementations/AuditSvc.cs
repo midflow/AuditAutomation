@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AuditAutomation.DAL.Repositories;
+using AuditAutomation.DAL;
 using AuditAutomation.Models;
 using Newtonsoft.Json;
 using Unity.Attributes;
@@ -54,12 +55,12 @@ namespace AuditAutomation.Svc.Services.Implementations
             bool isOK = false;
             if (data != null)
             {
-                var auditRepository = _repository.GetRepository<DAL.Audit>();
+                var auditRepository = _repository.GetRepository<DAL.Entities.Audit>();
                 var auditFromDB = auditRepository.FirstOrDefault(o => o.AuditId == data.AuditId);
                 if (auditFromDB == null)
                 {
                     Mapper mapper = new Mapper();
-                    DAL.Audit dbAudit = mapper.Map<Audit, DAL.Audit>(data);
+                    DAL.Entities.Audit dbAudit = mapper.Map<Audit, DAL.Entities.Audit>(data);
                     auditRepository.Add(dbAudit);
                     auditRepository.SaveChanges();
                 }

@@ -19,13 +19,22 @@ namespace AuditAutomation.Svc.Helpers
         {
             return new MapperConfiguration(config =>
             {
-                config.CreateMap<Audit, DAL.Audit>()
-                    .ForMember(c => c.Regions, option => option.MapFrom(o => o.Region));
-                config.CreateMap<AuditCriterias, DAL.AuditCriteria>();
-                config.CreateMap<Region, DAL.Region>();
-                config.CreateMap<Resources, DAL.Resource>();
-                config.CreateMap<Data, DAL.Datum>();
-                config.CreateMap<Certificates, DAL.Certificate>();
+                config.CreateMap<Audit, DAL.Entities.Audit>()
+                .ForMember(c => c.Regions, option => option.MapFrom(o => o.Region));
+                config.CreateMap<AuditCriterias, DAL.Entities.AuditCriteria>()
+                .ForMember(c => c.ResourceLocation, option => option.Ignore())
+                .ForMember(c => c.ResourcePlan, option => option.Ignore());
+                config.CreateMap<Region, DAL.Entities.Region>();
+                config.CreateMap<Resources, DAL.Entities.Resource>();
+                config.CreateMap<Data, DAL.Entities.Data>();
+                config.CreateMap<Certificates, DAL.Entities.Certificate>();
+                config.CreateMap<ADGroup, DAL.Entities.ADGroup>();
+                config.CreateMap<AuditData, DAL.Entities.AuditData>();
+                //config.CreateMap<, DAL.Entities.Resource>(); ResourceLocation
+                //ResourcePlan
+                config.CreateMap<User, DAL.Entities.User>()
+                .ForMember(c => c.UserRoles, option => option.Ignore());
+                config.CreateMap<Certificates, DAL.Entities.Certificate>();
             });
         }
     }

@@ -1,5 +1,6 @@
 namespace AuditAutomation.DAL.Migrations
 {
+    using AuditAutomation.DAL.Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,18 +15,25 @@ namespace AuditAutomation.DAL.Migrations
 
         protected override void Seed(AuditAutomation.DAL.AuditReportDBEntities context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Roles.AddOrUpdate(
+                p => p.Name,
+                new Role { Name = "CoAdministrator" },
+                new Role { Name = "Owner" }
+                );
+            var users = new User[]
+            {
+                new User{ SignInName="demouser0@Geico.com", DisplayName="User0, Demo"},
+                new User{ SignInName="demouser1@Geico.com", DisplayName="User1, Demo"},
+                new User{ SignInName="demouser2@Geico.com", DisplayName="User2, Demo"},
+                new User{ SignInName="demouser3@Geico.com", DisplayName="User3, Demo"},
+                new User{ SignInName="demouser4@Geico.com", DisplayName="User4, Demo"},
+                new User{ SignInName="demouser5@Geico.com", DisplayName="User5, Demo"},
+                new User{ SignInName="demouser6@Geico.com", DisplayName="User6, Demo"},
+                new User{ SignInName="demouser7@Geico.com", DisplayName="User7, Demo"},
+                new User{ SignInName="demouser8@Geico.com", DisplayName="User8, Demo"},
+                new User{ SignInName="demouser9@Geico.com", DisplayName="User9, Demo"}
+            };
+            context.Users.AddOrUpdate(users);
         }
     }
 }

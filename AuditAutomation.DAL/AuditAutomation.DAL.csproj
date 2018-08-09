@@ -53,13 +53,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="AuditReportDBEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AuditReportDBEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="AuditReportDBEntities.edmx.diagram">
-      <DependentUpon>AuditReportDBEntities.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,48 +72,37 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Audit.cs">
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuditCriteria.cs">
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuditReportDBEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuditReportDBEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuditReportDBEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuditReportDBEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuditReportDBEntities.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="AuditReportDBEntities.cs" />
     <Compile Include="BaseRepository.cs" />
-    <Compile Include="Certificate.cs">
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Datum.cs">
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
+    <Compile Include="DatabaseInitializer.cs" />
+    <Compile Include="Entities\ADGroup.cs" />
+    <Compile Include="Entities\Audit.cs" />
+    <Compile Include="Entities\AuditCriteria.cs" />
+    <Compile Include="Entities\AuditData.cs" />
+    <Compile Include="Entities\AuditUser.cs" />
+    <Compile Include="Entities\Certificate.cs" />
+    <Compile Include="Entities\Data.cs" />
+    <Compile Include="Entities\Region.cs" />
+    <Compile Include="Entities\Resource.cs" />
+    <Compile Include="Entities\ResourceLocation.cs" />
+    <Compile Include="Entities\ResourcePlan.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserADGroup.cs" />
+    <Compile Include="Entities\UserRole.cs" />
     <Compile Include="IBaseRepository.cs" />
+    <Compile Include="Migrations\201808091008520_initialize.cs" />
+    <Compile Include="Migrations\201808091008520_initialize.Designer.cs">
+      <DependentUpon>201808091008520_initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Region.cs">
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\Concrete\Repository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
-    <Compile Include="Resource.cs">
-      <DependentUpon>AuditReportDBEntities.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -148,23 +130,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AuditReportDB.mdf</DependentUpon>
     </Content>
-    <Content Include="AuditReportDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="AuditReportDBEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AuditReportDBEntities.edmx</DependentUpon>
-      <LastGenOutput>AuditReportDBEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="AuditReportDBEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AuditReportDBEntities.edmx</DependentUpon>
-      <LastGenOutput>AuditReportDBEntities.cs</LastGenOutput>
-    </Content>
-    <Content Include="AuditReportDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>AuditReportDB.mdf</DependentUpon>
-    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808091008520_initialize.resx">
+      <DependentUpon>201808091008520_initialize.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
